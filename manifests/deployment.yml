@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sbhanutejaspringbootcodeaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sbhanutejaspringbootcodeaks
+  template:
+    metadata:
+      labels:
+        app: sbhanutejaspringbootcodeaks 
+    spec:
+      containers:
+        - name: sbhanutejaspringbootcodeaks 
+          image: cloudazureit.azurecr.io/sbhanutejaspringbootcodeaks
+          ports:
+          - containerPort: 80
