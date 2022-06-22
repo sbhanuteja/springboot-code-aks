@@ -35,9 +35,9 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
+        repository: sbhanuteja/springboot-code-aks
+        dockerfile: petapp1
+        containerRegistry: cloudazureit.azurecr.io
         tags: |
           $(tag)
 
