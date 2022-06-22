@@ -22,8 +22,8 @@ pipeline {
         stage('Build docker image') {
            steps {
                script {         
-                 def customImage = docker.build('prawinkorvi/petclinic', "./docker")
-                 docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                 def customImage = docker.build('sbhanuteja/springboot-code-aks', "./docker")
+                 docker.withRegistry('https://cloudazureit.azurecr.io', 'dockerhub') {
                  customImage.push("${env.BUILD_NUMBER}")
                  }                     
            }
